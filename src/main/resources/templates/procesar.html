@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Ingresar</title>
+</head>
+<body>
+  <div >
+        <h1>Proceso de ingreso:</h1>
+        <div th:if="${!errores.isEmpty()}" class="card-body">
+    
+	        <ul class="list-group">
+				<li class="list-group-item" th:each="e : ${errores}" th:text="${e}"/>
+			</ul>
+		</div>
+      <div th:unless="${!errores.isEmpty()}">
+        <h1>Alumno ingresado con exito</h1>
+        <a th:href="@{/ingresar}">Ingresar nuevo alumno</a>
+      </div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+</body>
+</html>

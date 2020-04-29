@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Ingresar</title>
+</head>
+<body>
+  <div>
+        <h1>Ingreso de nuevo alumno</h1>
+        <form th:action="@{/procesar}"  method="post"> 
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido">
+            <br>
+            <label for="fnacimiento">Fecha de nacimiento</label>
+            <input type="text" id="fnacimiento" name="fnacimiento" placeholder="Dia-Mes-Año">
+            <br>
+            <label for="lnacimiento">Lugar de nacimiento</label>
+            <input type="text" id="lnacimiento" name="lnacimiento">
+            <br>
+            <label for="instituto">Instituto o Colegio de procedencia</label>
+            <input type="text" id="instituto" name="instituto">
+            <br>
+            <label for="numero">Telefono fijo</label>
+            <input type="text" id="numero" name="numero">
+            <br>
+            <label for="numerotelefonico">Telefono movil</label>
+            <input type="text" id="numerotelefonico" name="numerotelefonico">
+          	<br>
+          <button type="submit" >Enviar</button>
+        </form>
+  </div>
+</body>
+</html>
